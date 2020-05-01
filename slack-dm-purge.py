@@ -60,6 +60,6 @@ if __name__ == "__main__":
     if slack_token is None:
         print("{} env var not set".format(slack_token_env_var))
         sys.exit(1)
-    channels = dm_list(token)
+    channels = dm_list(slack_token)
     for channel in channels:
-        dm_delete(token, channel)
+        dm_delete(slack_token, channel)
